@@ -1,0 +1,15 @@
+{
+  "name": "oct",
+  "version": "1.0.0",
+  "description": "Laravel Elixir",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kietluu/oct.git"
+  },
+  "author": "kmagen2",
+  "license": "ISC"
+}
