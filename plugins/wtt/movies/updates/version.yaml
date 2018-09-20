@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table wtt_movies_'
+    - builder_table_create_wtt_movies_.php
+1.0.3:
+    - 'Created table wtt_movies_genres'
+    - builder_table_create_wtt_movies_genres.php
+1.0.4:
+    - 'Created table wtt_movies_movies_genres'
+    - builder_table_create_wtt_movies_movies_genres.php
+1.0.5:
+    - 'Updated table wtt_movies_movies_genres'
+    - builder_table_update_wtt_movies_movies_genres.php
+1.0.6:
+    - 'Updated table wtt_movies_'
+    - builder_table_update_wtt_movies_.php

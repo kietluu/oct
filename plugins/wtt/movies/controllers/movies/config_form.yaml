@@ -1,0 +1,10 @@
+name: Movies
+modelClass: wtt\Movies\Models\Movies
+form: $/wtt/movies/models/movies/fields.yaml
+defaultRedirect: wtt/movies/movies
+create:
+    redirect: 'wtt/movies/movies/update/:id'
+    redirectClose: wtt/movies/movies
+update:
+    redirect: wtt/movies/movies
+    redirectClose: wtt/movies/movies

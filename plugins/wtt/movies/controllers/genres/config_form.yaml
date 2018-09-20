@@ -1,0 +1,10 @@
+name: Genres
+form: $/wtt/movies/models/genre/fields.yaml
+modelClass: wtt\Movies\Models\Genre
+defaultRedirect: wtt/movies/genres
+create:
+    redirect: 'wtt/movies/genres/update/:id'
+    redirectClose: wtt/movies/genres
+update:
+    redirect: wtt/movies/genres
+    redirectClose: wtt/movies/genres

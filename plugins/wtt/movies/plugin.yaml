@@ -1,0 +1,16 @@
+plugin:
+    name: 'wtt.movies::lang.plugin.name'
+    description: 'wtt.movies::lang.plugin.description'
+    author: kmagen2
+    icon: oc-icon-video-camera
+    homepage: ''
+navigation:
+    menu-movies:
+        label: Movies
+        url: wtt/movies/movies
+        icon: icon-video-camera
+        sideMenu:
+            sub-menu-genres:
+                label: Genres
+                url: wtt/movies/genres
+                icon: icon-tag

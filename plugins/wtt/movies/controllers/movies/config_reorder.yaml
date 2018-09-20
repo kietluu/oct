@@ -1,0 +1,4 @@
+title: Movies
+modelClass: wtt\Movies\Models\Movies
+toolbar:
+    buttons: reorder_toolbar

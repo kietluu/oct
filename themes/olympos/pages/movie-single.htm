@@ -1,0 +1,52 @@
+title = "Movie single"
+url = "/movies/movie/:slug"
+layout = "default"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "wtt\Movies\Models\Movies"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    <h2>{{ record.name }}</h2>
+
+    
+    <img src="{{record.poster.thumb(200, auto)}}">
+    <img src="{{record.poster.thumb(100,100, {'mode':'crop'})}}">
+
+    <h4>{{record.year}}</h4>
+    <h3>Description</h3>
+
+    {{record.description| raw}}
+
+	<h3>Gallery</h3>
+
+	<ul class="gallery clearfix">
+		{% for image in record.movie_gallery %}
+			 <li><img src="{{image.thumb(80,80, {'mode': 'crop'})}}"></li>
+		{% endfor %}
+
+	</ul>
+
+    <h3>Genres</h3>
+
+    <ul>
+        {% for genre in record.genres %}
+            <li><a href="/genre/{{ genre.slug }}">{{genre.genre_title}}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h3>Actors</h3>
+    {% for actor in record.actors %}
+        {{ actor.actor_name }} - {{ actor.actor_age}}
+    {% endfor %}
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
