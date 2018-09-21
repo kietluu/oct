@@ -10,7 +10,15 @@ navigation:
         url: wtt/movies/movies
         icon: icon-video-camera
         sideMenu:
+            sub-menu-movies:
+                label: Movies
+                url: wtt/movies/movies
+                icon: icon-video-camera
             sub-menu-genres:
                 label: Genres
                 url: wtt/movies/genres
                 icon: icon-tag
+            sub-menu-actor:
+                label: Actors
+                url: wtt/movies/actor
+                icon: icon-user

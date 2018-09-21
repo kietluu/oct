@@ -15,3 +15,12 @@
 1.0.6:
     - 'Updated table wtt_movies_'
     - builder_table_update_wtt_movies_.php
+1.0.7:
+    - 'Created table wtt_movies_actors'
+    - builder_table_create_wtt_movies_actors.php
+1.0.8:
+    - 'Created table wtt_movies_actors_movies'
+    - builder_table_create_wtt_movies_actors_movies.php
+1.0.9:
+    - 'Updated table wtt_movies_'
+    - builder_table_update_wtt_movies__2.php

@@ -54,3 +54,9 @@ fields:
         nameFrom: genre_title
         descriptionFrom: description
         type: relation
+    actors:
+      label: Actors
+      span: left
+      type: actorbox
+
+

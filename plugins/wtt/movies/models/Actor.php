@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class Movies extends Model
+class Actor extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
@@ -24,35 +24,22 @@ class Movies extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'wtt_movies_';
-
-    
-    // protected $jsonable = ['actors'];
+    public $table = 'wtt_movies_actors';
 
 
 
-
-
-
-    /* Relation */
+    /*Relation */
      public $belongsToMany = [
-        'genres' => [
-            'wtt\Movies\Models\Genre',
-            'table' => 'wtt_movies_movies_genres',
-            'order' => 'genre_title'
-        ],
-        'actors' => [
-            'wtt\Movies\Models\Actor',
+        'movies' => [
+            'WTT\Movies\Models\Movies',
             'table' => 'wtt_movies_actors_movies',
             'order' => 'name'
         ]
     ];
 
-    public $attachOne = [
-        'poster' => 'System\Models\File'
-    ];
 
-    public $attachMany = [
-        'movie_gallery' => 'System\Models\File'
-    ];
+
+    public function getFullNameAttribute(){
+        return $this->name . " " . $this->lastname;
+    }
 }

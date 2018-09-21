@@ -8,6 +8,16 @@ class Plugin extends PluginBase
     {
     }
 
+        public function registerFormWidgets()
+    {
+        return [
+            'wtt\Movies\FormWidgets\Actorbox' => [
+                'label' => 'Actorbox field',
+                'code'  => 'actorbox'
+            ]    
+        ];
+    }
+
     public function registerSettings()
     {
     }

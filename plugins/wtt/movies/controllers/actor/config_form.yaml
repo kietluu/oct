@@ -1,0 +1,10 @@
+name: Actor
+form: $/wtt/movies/models/actor/fields.yaml
+modelClass: wtt\Movies\Models\Actor
+defaultRedirect: wtt/movies/actor
+create:
+    redirect: 'wtt/movies/actor/update/:id'
+    redirectClose: wtt/movies/actor
+update:
+    redirect: wtt/movies/actor
+    redirectClose: wtt/movies/actor

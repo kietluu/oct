@@ -39,13 +39,13 @@ notFoundMessage = "Record not found"
 
     <ul>
         {% for genre in record.genres %}
-            <li><a href="/genre/{{ genre.slug }}">{{genre.genre_title}}</a></li>
+            <li><a href="/genres/{{ genre.slug }}">{{genre.genre_title}}</a></li>
         {% endfor %}
     </ul>
 
     <h3>Actors</h3>
     {% for actor in record.actors %}
-        {{ actor.actor_name }} - {{ actor.actor_age}}
+        {{ actor.name }} - {{ actor.lastname}}
     {% endfor %}
 {% else %}
     {{ notFoundMessage }}
